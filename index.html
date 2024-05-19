@@ -57,8 +57,8 @@
             width: 100%;
             white-space: nowrap;
             overflow: hidden;
-            background-color: yellow;
-            color: black;
+            background-color: #D8BFD8;
+            color: white;
             font-size: 24px;
             padding: 10px 0;
         }
@@ -86,7 +86,7 @@
         function getRandomOrder() {
             const words = ["husky", "music", "club"];
             let result = [];
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 10; i++) { // Repeat the sequence multiple times for continuous effect
                 const shuffled = words.sort(() => 0.5 - Math.random());
                 result.push(...shuffled);
             }
@@ -94,9 +94,6 @@
         }
 
         document.getElementById('marquee-text').innerText = getRandomOrder();
-        setInterval(() => {
-            document.getElementById('marquee-text').innerText = getRandomOrder();
-        }, 10000);
     </script>
 </body>
 </html>
